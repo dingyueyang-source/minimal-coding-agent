@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimal Coding Agent</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Minimal Coding Agent</h1>
+    <p class="muted">Each task runs in its own Docker sandbox. The model can only call <code>create_file</code>.</p>
+    <p id="health" class="health" role="status">Checking backend…</p>
+  </header>
+
+  <section class="card">
+    <label for="request">Task</label>
+    <textarea id="request" rows="4" maxlength="8192" spellcheck="false">Create hello.txt in the workspace with the content Hello, world!</textarea>
+    <div class="row">
+      <button id="run" type="button">Run</button>
+      <span id="input-hint" class="muted"></span>
+    </div>
+    <p id="notice" class="notice" hidden></p>
+    <button id="resume" type="button" class="secondary" hidden>Resume checking this task</button>
+  </section>
+
+  <section id="task" class="card" hidden>
+    <div class="task-head">
+      <h2>Status: <span id="status" class="badge">—</span></h2>
+      <dl class="meta">
+        <dt>Task</dt><dd id="task-id">—</dd>
+        <dt>Container</dt><dd id="container">—</dd>
+        <dt>Cleanup</dt><dd id="cleanup">—</dd>
+        <dt>Created</dt><dd id="created">—</dd>
+        <dt>Finished</dt><dd id="finished">—</dd>
+      </dl>
+    </div>
+
+    <ol id="phases" class="phases"></ol>
+
+    <div id="error" class="error" hidden>
+      <strong id="error-code"></strong>
+      <p id="error-message"></p>
+      <p id="error-phase" class="muted"></p>
+    </div>
+    <p id="cleanup-error" class="error" hidden></p>
+
+    <h3>Files <span id="partial" class="badge warn" hidden>incomplete result</span></h3>
+    <div id="files"><p class="muted">No files read back yet.</p></div>
+
+    <h3>Agent message</h3>
+    <pre id="agent-message" class="muted">—</pre>
+
+    <details open>
+      <summary>Events</summary>
+      <ol id="events" class="events"></ol>
+    </details>
+  </section>
+</main>
+</body>
+</html>

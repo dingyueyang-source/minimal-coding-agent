@@ -1,0 +1,366 @@
+{
+  "run_at": "2026-10-17T23:31:24.710081+00:00",
+  "model": "qwen3.8-flash",
+  "records": [
+    {
+      "scenario": "s1a-original",
+      "real_model": true,
+      "request": "Create hello.txt in the workspace with the content Hello, world!",
+      "task_id": "0a7bfc74-4fc2-46f5-8b50-5f2b1359f72f",
+      "container_id": "5d1cb97954ac",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "hello.txt",
+          "expected": "Hello, world!",
+          "expected_utf8_bytes": 13,
+          "actual": "Hello, world!",
+          "actual_size_bytes": 13,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 0/3",
+      "agent_message": "Created `hello.txt` with the content `Hello, world!`.",
+      "events": [
+        "23:29:51.735 TASK_ACCEPTED",
+        "23:29:52.771 PHASE_CHANGED agent_running",
+        "23:29:55.968 FILE_WRITTEN",
+        "23:29:56.794 PHASE_CHANGED retrieving",
+        "23:29:57.418 PHASE_CHANGED cleaning",
+        "23:29:58.468 CLEANUP_DONE",
+        "23:29:58.468 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "health_slots_freed": true
+    },
+    {
+      "scenario": "s1b-exact",
+      "real_model": true,
+      "request": "Create hello.txt whose content is exactly the 13 characters Hello, world! — no trailing newline, no quotes, no other characters.",
+      "task_id": "de1b7bd8-747f-40f4-b21f-a8e396a4ea49",
+      "container_id": "76ebb960d6fe",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "hello.txt",
+          "expected": "Hello, world!",
+          "expected_utf8_bytes": 13,
+          "actual": "Hello, world!",
+          "actual_size_bytes": 13,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 0/3",
+      "agent_message": "Created hello.txt with exactly 13 bytes.",
+      "events": [
+        "23:30:00.498 TASK_ACCEPTED",
+        "23:30:01.430 PHASE_CHANGED agent_running",
+        "23:30:05.573 FILE_WRITTEN",
+        "23:30:06.768 PHASE_CHANGED retrieving",
+        "23:30:07.534 PHASE_CHANGED cleaning",
+        "23:30:09.001 CLEANUP_DONE",
+        "23:30:09.001 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "health_slots_freed": true
+    },
+    {
+      "scenario": "s2-random-1",
+      "real_model": true,
+      "request": "Create a file named rand-aeb04a4f.txt whose entire content is exactly MARK-6eee6752eb68cff2 with no trailing newline and nothing else.",
+      "task_id": "7f6b88f4-6188-44a3-9d02-b27e56680b17",
+      "container_id": "bfef021ec90d",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "rand-aeb04a4f.txt",
+          "expected": "MARK-6eee6752eb68cff2",
+          "expected_utf8_bytes": 21,
+          "actual": "MARK-6eee6752eb68cff2",
+          "actual_size_bytes": 21,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 0/3",
+      "agent_message": "The file `rand-aeb04a4f.txt` has been created with exactly the 21-character content `MARK-6eee6752eb68cff2` and no trailing newline.",
+      "events": [
+        "23:30:11.492 TASK_ACCEPTED",
+        "23:30:12.431 PHASE_CHANGED agent_running",
+        "23:30:15.389 FILE_WRITTEN",
+        "23:30:17.678 PHASE_CHANGED retrieving",
+        "23:30:18.200 PHASE_CHANGED cleaning",
+        "23:30:19.186 CLEANUP_DONE",
+        "23:30:19.187 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "health_slots_freed": true
+    },
+    {
+      "scenario": "s2-random-2",
+      "real_model": true,
+      "request": "Create a file named rand-cd9226fc.txt whose entire content is exactly MARK-91ec1f41fe4e2507 with no trailing newline and nothing else.",
+      "task_id": "d841e61f-d0eb-41a5-b8a9-1975e2da5ac7",
+      "container_id": "2ff2a3426cfb",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "rand-cd9226fc.txt",
+          "expected": "MARK-91ec1f41fe4e2507",
+          "expected_utf8_bytes": 21,
+          "actual": "MARK-91ec1f41fe4e2507",
+          "actual_size_bytes": 21,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 0/3",
+      "agent_message": "Created rand-cd9226fc.txt containing exactly `MARK-91ec1f41fe4e2507` (21 bytes, no trailing newline).",
+      "events": [
+        "23:30:21.248 TASK_ACCEPTED",
+        "23:30:22.126 PHASE_CHANGED agent_running",
+        "23:30:24.197 FILE_WRITTEN",
+        "23:30:26.067 PHASE_CHANGED retrieving",
+        "23:30:26.612 PHASE_CHANGED cleaning",
+        "23:30:27.467 CLEANUP_DONE",
+        "23:30:27.467 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "health_slots_freed": true
+    },
+    {
+      "scenario": "s3-nested-multi",
+      "real_model": true,
+      "request": "Create these two files. Decode each JSON string literal and write its exact characters (real newlines where \\n appears, no trailing newline):\n- path docs/说明-388998f9.txt with content equal to the JSON string \"第一行：沙箱测试 388998f9\\n第二行：中文内容\\n第三行：结束\"\n- path data/nested/notes-388998f9.md with content equal to the JSON string \"# 笔记 388998f9\\n- item one\\n- 项目二\"",
+      "task_id": "3db1a704-9ea7-4731-a436-5fffe32deae9",
+      "container_id": "afd975b862fc",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "docs/说明-388998f9.txt",
+          "expected": "第一行：沙箱测试 388998f9\n第二行：中文内容\n第三行：结束",
+          "expected_utf8_bytes": 77,
+          "actual": "第一行：沙箱测试 388998f9\n第二行：中文内容\n第三行：结束",
+          "actual_size_bytes": 77,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        },
+        {
+          "path": "data/nested/notes-388998f9.md",
+          "expected": "# 笔记 388998f9\n- item one\n- 项目二",
+          "expected_utf8_bytes": 40,
+          "actual": "# 笔记 388998f9\n- item one\n- 项目二",
+          "actual_size_bytes": 40,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 0/3",
+      "agent_message": "Created both files with the decoded contents and no trailing newline:\n\n- `docs/说明-388998f9.txt`\n- `data/nested/notes-388998f9.md`",
+      "events": [
+        "23:30:29.594 TASK_ACCEPTED",
+        "23:30:30.329 PHASE_CHANGED agent_running",
+        "23:30:35.496 FILE_WRITTEN",
+        "23:30:37.689 FILE_WRITTEN",
+        "23:30:39.098 PHASE_CHANGED retrieving",
+        "23:30:40.316 PHASE_CHANGED cleaning",
+        "23:30:41.177 CLEANUP_DONE",
+        "23:30:41.177 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "health_slots_freed": true
+    },
+    {
+      "scenario": "s4-special-chars",
+      "real_model": true,
+      "request": "Create the file special-78e16e21.html whose content equals the JSON string \"He said \\\"hi\\\" & 'bye' 78e16e21\\nPath: C:\\\\temp\\\\new\\\\x.txt and \\\\n literal\\n<b>bold</b><img src=x onerror=\\\"window.__xss=1\\\"><script>window.__xss=2</script>\" after JSON decoding (exact characters, real newlines for \\n escapes, keep every backslash that the JSON decodes to, no trailing newline).",
+      "task_id": "1b582db5-2377-4721-b80c-fa734df317c4",
+      "container_id": "e8f71d0e3a68",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "special-78e16e21.html",
+          "expected": "He said \"hi\" & 'bye' 78e16e21\nPath: C:\\temp\\new\\x.txt and \\n literal\n<b>bold</b><img src=x onerror=\"window.__xss=1\"><script>window.__xss=2</script>",
+          "expected_utf8_bytes": 147,
+          "actual": "He said \"hi\" & 'bye' 78e16e21\nPath: C:\\temp\\new\\x.txt and \\n literal\n<b>bold</b><img src=x onerror=\"window.__xss=1\"><script>window.__xss=2</script>",
+          "actual_size_bytes": 147,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 0/3",
+      "agent_message": "The file `special-78e16e21.html` was created with exactly 147 bytes, matching the JSON-decoded string character for character:\n\n- Line 1: `He said \"hi\" & 'bye' 78e16e21` — escaped quotes decoded to real quotes.\n- Line 2: `Path: C:\\temp\\new\\x.txt and \\n literal` — `\\\\` decoded to single backslashes, and `\\\\n` decoded to a literal backslash + `n` (not a newline).\n- Line 3: `<b>bold</b><img src=x onerror=\"window.__xss=1\"><script>window.__xss=2</script>` — kept verbatim as literal text, with no trailing newline.",
+      "events": [
+        "23:30:43.280 TASK_ACCEPTED",
+        "23:30:44.186 PHASE_CHANGED agent_running",
+        "23:30:50.201 FILE_WRITTEN",
+        "23:31:07.245 PHASE_CHANGED retrieving",
+        "23:31:07.706 PHASE_CHANGED cleaning",
+        "23:31:08.512 CLEANUP_DONE",
+        "23:31:08.512 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "health_slots_freed": true,
+      "dialogs": []
+    },
+    {
+      "scenario": "s5-concurrent-1",
+      "real_model": true,
+      "request": "shared.txt = ISO-315029f78a9cfb86",
+      "task_id": "1a7288c5-8e36-4954-a908-25f973b47b63",
+      "container_id": "d8078a81658c",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "shared.txt",
+          "expected": "ISO-315029f78a9cfb86",
+          "expected_utf8_bytes": 20,
+          "actual": "ISO-315029f78a9cfb86",
+          "actual_size_bytes": 20,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 1/3",
+      "agent_message": "Done. `shared.txt` now contains exactly `ISO-315029f78a9cfb86` — 20 bytes with no trailing newline.",
+      "events": [
+        "23:31:11.251 TASK_ACCEPTED",
+        "23:31:12.362 PHASE_CHANGED agent_running",
+        "23:31:15.316 FILE_WRITTEN",
+        "23:31:17.694 PHASE_CHANGED retrieving",
+        "23:31:18.172 PHASE_CHANGED cleaning",
+        "23:31:19.294 CLEANUP_DONE",
+        "23:31:19.295 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "distinct_containers": true,
+      "executions_overlapped": true
+    },
+    {
+      "scenario": "s5-concurrent-2",
+      "real_model": true,
+      "request": "shared.txt = ISO-cc359055328c65db",
+      "task_id": "bfa3aa38-5e61-45f1-ac8e-a413cae6ef1e",
+      "container_id": "2e205cbafad8",
+      "status": "succeeded",
+      "execution_status": "succeeded",
+      "cleanup": {
+        "status": "done",
+        "error": null
+      },
+      "error": null,
+      "unexpected_files": [],
+      "checks": [
+        {
+          "path": "shared.txt",
+          "expected": "ISO-cc359055328c65db",
+          "expected_utf8_bytes": 20,
+          "actual": "ISO-cc359055328c65db",
+          "actual_size_bytes": 20,
+          "exact_match": true,
+          "read_back": true,
+          "dom_text_match": true,
+          "dom_element_children": []
+        }
+      ],
+      "leftover_containers_any_state": [],
+      "xss_flag": null,
+      "health_text_after": "Backend ready · model: qwen3.8-flash · slots in use 0/3",
+      "agent_message": "Created shared.txt containing exactly `ISO-cc359055328c65db` (20 bytes, no trailing newline).",
+      "events": [
+        "23:31:11.402 TASK_ACCEPTED",
+        "23:31:12.543 PHASE_CHANGED agent_running",
+        "23:31:15.423 FILE_WRITTEN",
+        "23:31:18.386 PHASE_CHANGED retrieving",
+        "23:31:19.042 PHASE_CHANGED cleaning",
+        "23:31:20.471 CLEANUP_DONE",
+        "23:31:20.471 PHASE_CHANGED complete"
+      ],
+      "passed": true,
+      "distinct_containers": true,
+      "executions_overlapped": true
+    }
+  ],
+  "project_containers_after_any_state": []
+}
